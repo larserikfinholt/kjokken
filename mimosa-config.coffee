@@ -1,7 +1,7 @@
 exports.config =
   minMimosaVersion:'0.10.0'
 
-  modules: ['server', 'require', 'minify', 'live-reload', 'combine', 'mimosa-requirebuild-textplugin-include', 'skeleton']
+  modules: ['server', 'require', 'minify', 'live-reload', 'combine', 'mimosa-requirebuild-textplugin-include', 'skeleton', 'web-package']
 
   combine:
     folders: [
@@ -24,7 +24,7 @@ exports.config =
   server:
     port: 3000
     path: 'server.js'
-    defaultServer:
+    #defaultServer:
       # enabled: true
       # onePager: true
 
