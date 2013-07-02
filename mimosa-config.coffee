@@ -45,3 +45,10 @@ exports.config =
         stubModules: ['text']
         paths:
           text: 'durandal/amd/text'
+
+  webPackage:
+    exclude: [".deployment"]
+    #archiveName: "app"
+    #configName: "config"
+    #outPath: "dist"
+    #appjs: "app.js"
