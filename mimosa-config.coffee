@@ -47,7 +47,7 @@ exports.config =
           text: 'durandal/amd/text'
 
   webPackage:
-    exclude: [".deployment", "README.md","node_modules","mimosa-config.coffee","mimosa-config.js","assets",".git",".gitignore"]
+    exclude: [".deployment", "mimosa-config.coffee","mimosa-config.js","assets",".git",".gitignore", "*.zip", "azure_error"]
     #archiveName: "app"
     #configName: "config"
     #outPath: "dist"
