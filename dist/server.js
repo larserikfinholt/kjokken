@@ -1,3 +1,4 @@
+console.log("Starting....");
 var express = require('express'),
     routes = require('./routes'),
     engines = require('consolidate');
