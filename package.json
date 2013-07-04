@@ -13,10 +13,11 @@
   "private": true,
   "engines": {
     "node": "0.8.x"
-    },
+  },
   "dependencies": {
     "express": "3.2.4",
     "consolidate": "0.9.1",
     "ejs": "0.8.4"
-  }
+  },
+  "scripts": { "start": "node app.js" } 
 }

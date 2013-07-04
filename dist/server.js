@@ -1,9 +1,10 @@
 console.log("Starting....");
 var express = require('express'),
     routes = require('./routes'),
-    engines = require('consolidate');
+    engines = require('consolidate'),
+    config = require("./config");
 
-exports.startServer = function(config, callback) {
+var a = function(config, callback) {
 
   var port = process.env.PORT || config.server.port;
 
@@ -35,3 +36,5 @@ exports.startServer = function(config, callback) {
   callback(server);
 };
 
+
+a.startServer(config, function(){});
