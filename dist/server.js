@@ -37,4 +37,4 @@ var a = function(config, callback) {
 };
 
 
-a.startServer(config, function(){});
+a(config, function(){});
