@@ -21,6 +21,7 @@ var config = {
   "liveReload": {
     "enabled": false
   },
+  "isOptimize": true,
   "server": {
     "defaultServer": {
       "enabled": false,

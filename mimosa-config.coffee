@@ -48,7 +48,7 @@ exports.config =
 
   webPackage:
     exclude: [".deployment", "mimosa-config.coffee","mimosa-config.js","assets",".git",".gitignore", "*.zip", "azure_error", "README.md", "makefile", "make.bat"]
+    appjs: "app.js"
     #archiveName: "app"
     #configName: "config"
     #outPath: "dist"
-    #appjs: "app.js"
