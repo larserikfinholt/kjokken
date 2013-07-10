@@ -19,5 +19,7 @@
     "consolidate": "0.9.1",
     "ejs": "0.8.4"
   },
-  "scripts": { "start": "node app.js" } 
+  "scripts": {
+    "start": "node app.js"
+  }
 }
