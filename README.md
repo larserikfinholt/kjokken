@@ -1,6 +1,10 @@
 Kjokkentavla
 ========================
 
-1. Use `make start` to start up an asset server and begin coding immediately.
-2. Use `make build-opt` to create your optimized application. The deployable source will be output to a 'dist' folder.
-3. See the [Mimosa](http://mimosajs.com/) project for details on how to customize the solution and use other features.
+Noe mer innhold kommer her etter hvert....
+
+Planen er å lage en google/hotmail planlegger app, men mest for å leke med litt ny teknologi.
+
+- node.js
+- azure
+- durandaljs
