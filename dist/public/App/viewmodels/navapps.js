@@ -1,0 +1,1 @@
+define(["durandal/app","services/logger"],function(e,t){function n(){return t.log("Nav apps Activated",null,"apps",!1),!0}var r={activate:n,title:"Nav apps View",apps:ko.observableArray([]),activeApp:ko.observable("All")};return e.on("apps:loaded").then(function(e){t.log("Apps loaded",e,"apps",!0),r.apps(e)}),r});

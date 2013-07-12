@@ -1,0 +1,1 @@
+define(["durandal/app","services/logger"],function(e,t){var n={title:"Nav users View",users:ko.observableArray([]),activeUser:ko.observable("All"),activate:function(){return!0}};return e.on("settings:loaded").then(function(e){_.each(e.users,function(e){e.count=0}),n.users(e.users)}),n});

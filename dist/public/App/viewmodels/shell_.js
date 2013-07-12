@@ -1,0 +1,1 @@
+define(["durandal/plugins/router","durandal/app"],function(e,t){return{router:e,search:function(){t.showMessage("Search not yet implemented...")},activate:function(){return e.activate("welcome")}}});
