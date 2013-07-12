@@ -18,6 +18,8 @@ define(function(require) {
     require('viewmodels/home')
     require('viewmodels/calendar')
         require('viewmodels/settings')
+        require('viewmodels/navapps')
+        require('viewmodels/navusers')
 require('viewmodels/users')
     require('services/logger')
     require('services/auth')
