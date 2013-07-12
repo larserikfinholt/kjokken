@@ -1,14 +1,38 @@
-﻿define(['durandal/plugins/router', 'durandal/app'], function (router, app) {
+﻿define(['durandal/system', 'durandal/plugins/router', 'durandal/app', 'services/logger', 'services/data','viewmodels/settings', 'viewmodels/calendar'],
+    function (system, router, app, logger, data,se,calendar) {
+        var self = this;
+        var shell = {
+            activate: activate,
+            router: router,
+            loggedIn: ko.observable(false)
+        };
 
-    return {
-        router: router,
-        search: function() {
-            //It's really easy to show a message box.
-            //You can add custom options too. Also, it returns a promise for the user's response.
-            app.showMessage('Search not yet implemented...');
-        },
-        activate: function () {
-            return router.activate('welcome');
+        app.on("authentication:success", function (authResult) {
+            log("Authentication sucess", authResult, true);
+
+            shell.loggedIn(true);
+        });
+        
+
+      
+
+        return shell;
+
+        //#region Internal Methods
+        function activate() {
+            return boot();
         }
-    };
-});
+
+        function boot() {
+            router.mapNav('home');
+            router.mapNav('calendar');
+            router.mapRoute('settings');
+            log('Boot completed!', null, true);
+            return router.activate('home');
+        }
+
+        function log(msg, data, showToast) {
+            logger.log(msg, data, system.getModuleId(shell), showToast);
+        }
+        //#endregion
+    });

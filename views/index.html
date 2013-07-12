@@ -23,6 +23,16 @@
                 msViewportStyle.appendChild(document.createTextNode(mq));
                 document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
             }
+
+                    // Use a button to handle authentication the first time.
+        function handleClientLoad() {
+            if (window.auth == undefined) {
+                window.setTimeout(handleClientLoad, 1000);
+            } else {
+                window.setTimeout(window.auth.handleClientLoad, 1000);
+            }
+        }
+
         </script>
     </head>
     <body>
@@ -39,5 +49,16 @@
         <script src="socket.io/socket.io.js"></script>
         <script src="App/reload-client.js"></script>
         <script src="App/durandal/amd/require.js" data-main="/App/main.js"></script>
+
+        <!-- Uncomment below to use fake auth and mock data -->
+     <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+    <script>
+        window.runMode = "Google";
+        if (window.runMode != "Google") { console.log("Fake authentication"); handleClientLoad(); }
+    </script>
+
+
     </body>
+
+
 </html>

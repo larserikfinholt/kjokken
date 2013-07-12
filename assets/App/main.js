@@ -8,7 +8,8 @@ define(function(require) {
     var app = require('durandal/app'),
         viewLocator = require('durandal/viewLocator'),
         system = require('durandal/system'),
-        router = require('durandal/plugins/router');
+        router = require('durandal/plugins/router'),
+        auth = require('services/auth');
 
     //This second set of requires is temporary, until we werite a custom mimosa module to handle it.
     require('durandal/messageBox')
@@ -16,10 +17,17 @@ define(function(require) {
     require('viewmodels/shell')
     require('viewmodels/welcome')
     require('viewmodels/flickr')
-    
+    require('services/logger')
+    require('services/auth')
+
+
     //>>excludeStart("build", true);
     system.debug(true);
     //>>excludeEnd("build");
+
+    // Global auth for use with google
+    window.auth = auth;
+
 
     app.title = 'Durandal Starter Kit';
     app.start().then(function () {
@@ -29,8 +37,8 @@ define(function(require) {
 
         //configure routing
         router.useConvention();
-        router.mapNav('welcome');
-        router.mapNav('flickr');
+        //router.mapNav('welcome');
+        //router.mapNav('flickr');
 
         app.adaptToDevice();
         
@@ -38,3 +46,12 @@ define(function(require) {
         app.setRoot('viewmodels/shell', 'entrance');
     });
 });
+
+window.handleGoogleLoaded = function (result) {
+    debugger;
+    console.log(result, app);
+
+    gapi.auth.authorize({ client_id: 'clientId', scope: 'scopes', immediate: true }, function (res) {
+        console.log(res);
+    });
+};
