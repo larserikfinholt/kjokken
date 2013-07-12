@@ -15,8 +15,10 @@ define(function(require) {
     require('durandal/messageBox')
     require('durandal/transitions/entrance')
     require('viewmodels/shell')
-    require('viewmodels/welcome')
-    require('viewmodels/flickr')
+    require('viewmodels/home')
+    require('viewmodels/calendar')
+        require('viewmodels/settings')
+require('viewmodels/users')
     require('services/logger')
     require('services/auth')
 
