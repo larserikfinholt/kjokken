@@ -1,7 +1,7 @@
 exports.config =
   minMimosaVersion:'0.10.0'
 
-  modules: ['server', 'require', 'minify', 'live-reload', 'combine', 'mimosa-requirebuild-textplugin-include', 'skeleton', 'web-package']
+  modules: ['server', 'require', 'minify', 'live-reload', 'combine', 'mimosa-requirebuild-textplugin-include', 'skeleton', 'web-package', 'mimosa-karma']
 
   combine:
     folders: [
@@ -52,3 +52,9 @@ exports.config =
     #archiveName: "app"
     #configName: "config"
     #outPath: "dist"
+
+  karma:
+    configFile: 'karma.conf.js'
+    #externalConfig: true
+    #basepath: 'assets/'
+    #autoWatch: true
