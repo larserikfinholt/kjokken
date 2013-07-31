@@ -3,7 +3,7 @@
 
 
 // base path, that will be used to resolve files and exclude
-basePath = 'public/';
+basePath = 'assets/';
 
 
 // list of files / patterns to load in the browser

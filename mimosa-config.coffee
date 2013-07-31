@@ -53,8 +53,5 @@ exports.config =
     #configName: "config"
     #outPath: "dist"
 
-  karma:
+  karma: 
     configFile: 'karma.conf.js'
-    #externalConfig: true
-    #basepath: 'assets/'
-    #autoWatch: true

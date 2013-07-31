@@ -1,7 +1,10 @@
 ﻿require.config({
     paths: {
-        'text': 'durandal/amd/text'
-    }
+        'text': 'durandal/amd/text',
+        'jquery': '../Scripts/jquery-1.9.1',
+        'knockout': '../Scripts/knockout-2.2.1',
+        'underscore': '../Scripts/underscore'
+    },
 });
 
 define(function(require) {
@@ -17,10 +20,10 @@ define(function(require) {
     require('viewmodels/shell')
     require('viewmodels/home')
     require('viewmodels/calendar')
-        require('viewmodels/settings')
-        require('viewmodels/navapps')
-        require('viewmodels/navusers')
-require('viewmodels/users')
+    require('viewmodels/settings')
+    require('viewmodels/navapps')
+    require('viewmodels/navusers')
+    require('viewmodels/users')
     require('services/logger')
     require('services/auth')
 
